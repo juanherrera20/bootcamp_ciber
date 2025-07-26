@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
+    # Aplicaciones de Terceros
+    'rest_framework',
+
+    #Nuestras aplicaciones
+    'apps.users',
+    'apps.ubication',
+
 ]
 
 MIDDLEWARE = [
@@ -72,10 +81,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "CIBERNINJAS",  # 
+        "USER": "backend_user",
+        "PASSWORD": "123456",  # Cambiar
+        "HOST": "192.168.39.124",
+        "PORT": "3306",  # 3306 o 3307
     }
 }
 
@@ -120,3 +134,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# --------------------- New Fields and settings -----------------------------------------S
+
+AUTH_USER_MODEL = "users.customUser"
