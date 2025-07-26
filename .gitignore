@@ -1,0 +1,44 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.mo
+
+# Virtual environment
+backend/venv/
+
+# Django static/media (generados)
+backend/staticfiles/
+backend/media/
+
+# Entornos y configuraciones sensibles
+.env
+.env.*
+
+# IDEs y editores
+.vscode/
+.idea/
+
+# Node.js / Vue
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+frontend/.cache/
+frontend/.vite/
+frontend/public/build/
+
+# Testing y cobertura
+.pytest_cache/
+coverage/
+htmlcov/
+
+# Archivos temporales
+*.lock
+*.tmp
+*.swp
+*.bak
+*.orig
+
